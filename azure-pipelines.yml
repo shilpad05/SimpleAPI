@@ -6,8 +6,10 @@
 trigger:
 - master
 
-pool:
-  vmImage: ubuntu-default
+pool: 
+   name: Default
+   demands:
+    - agent.name -equals ubuntu-default
 
 variables:
   buildConfiguration: 'Release'
